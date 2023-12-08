@@ -1,0 +1,6 @@
+package com.devfest.flutter_tilt_widget_widget_example
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
