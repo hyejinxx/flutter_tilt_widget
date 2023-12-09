@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tilt_widget/models/gyroscope_event.dart';
-import 'package:flutter_tilt_widget/models/gyroscope_stream.dart';
+
+import 'models/gyroscope_event.dart';
+import 'models/gyroscope_stream.dart';
 
 /// FlutterTilt widget
 class FlutterTilt extends StatefulWidget {
@@ -16,6 +17,7 @@ class FlutterTilt extends StatefulWidget {
 class _FlutterTiltState extends State<FlutterTilt> {
   /// Instance of the GyroscopeStream class
   final GyroscopeStream _gyroscopeStreamClass = GyroscopeStream();
+
   /// Matrix4 to apply the transform
   final matrix = Matrix4.identity();
 

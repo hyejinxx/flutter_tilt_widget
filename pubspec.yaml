@@ -1,8 +1,8 @@
-name: flutter_tilt_widget
+name: flutter_tilt_widget_widget
 description: "You can use this package to make your widget using tilt effect."
-version: 0.1.5
-repository: https://github.com/hyejinxx/flutter_tilt_widget
-homepage: https://github.com/hyejinxx/flutter_tilt_widget
+version: 0.1.7
+repository: https://github.com/hyejinxx/flutter_tilt_widget_widget
+homepage: https://github.com/hyejinxx/flutter_tilt_widget_widget
 
 environment:
   sdk: ">=2.12.0 <4.0.0"

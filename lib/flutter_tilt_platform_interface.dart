@@ -1,7 +1,7 @@
-import 'package:flutter_tilt_widget/models/gyroscope_event.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_tilt_method_channel.dart';
+import 'models/gyroscope_event.dart';
 
 abstract class FlutterTiltPlatform extends PlatformInterface {
   /// Constructs a FlutterTiltPlatform.

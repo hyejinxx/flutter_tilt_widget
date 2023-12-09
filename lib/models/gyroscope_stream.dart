@@ -9,6 +9,7 @@ class GyroscopeStream {
   factory GyroscopeStream() {
     return _instance;
   }
+
   GyroscopeStream._internal();
 
   /// The event channel used to interact with the native platform.

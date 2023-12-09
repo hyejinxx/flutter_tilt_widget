@@ -25,3 +25,11 @@ make it more perfect and active
 ## 0.1.5
 
 add dartdoc
+
+## 0.1.6
+
+formatting code and edit repository link to pubspec.yaml
+
+## 0.1.7
+
+edit repository link to pubspec.yaml
