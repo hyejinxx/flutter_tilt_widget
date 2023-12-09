@@ -14,7 +14,6 @@ class FlutterTiltPlugin : FlutterPlugin, MethodCallHandler {
     private lateinit var channel: MethodChannel
 
     private lateinit var gyroscopeChannel: EventChannel
-
     private lateinit var gyroScopeStreamHandler: StreamHandlerImpl
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
@@ -29,6 +28,11 @@ class FlutterTiltPlugin : FlutterPlugin, MethodCallHandler {
         gyroscopeChannel =
             EventChannel(flutterPluginBinding.binaryMessenger, GYROSCOPE_CHANNEL_NAME)
         gyroscopeChannel.setStreamHandler(gyroScopeStreamHandler)
+    }
+
+    companion object {
+        private const val GYROSCOPE_CHANNEL_NAME = "flutter_tilt_widget_event_channel"
+        private const val METHOD_CHANNEL_NAME = "flutter_tilt_widget_method_channel"
     }
 
     override fun onMethodCall(call: MethodCall, result: Result) {
@@ -49,8 +53,5 @@ class FlutterTiltPlugin : FlutterPlugin, MethodCallHandler {
         teardownEventChannels()
     }
 
-    companion object {
-        private const val GYROSCOPE_CHANNEL_NAME = "flutter_tilt_widget_event_channel"
-        private const val METHOD_CHANNEL_NAME = "flutter_tilt_widget_method_channel"
-    }
+
 }

@@ -17,16 +17,10 @@ internal class StreamHandlerImpl(
     private val sensor: Sensor by lazy {
         sensorManager.getDefaultSensor(sensorType)
     }
-
     override fun onListen(arguments: Any?, events: EventSink) {
         sensorEventListener = createSensorEventListener(events)
         sensorManager.registerListener(sensorEventListener, sensor, updateInterval)
     }
-
-    override fun onCancel(arguments: Any?) {
-        sensorManager.unregisterListener(sensorEventListener)
-    }
-
     private fun createSensorEventListener(events: EventSink): SensorEventListener {
         return object : SensorEventListener {
             override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
@@ -39,5 +33,9 @@ internal class StreamHandlerImpl(
                 events.success(sensorValues)
             }
         }
+    }
+
+    override fun onCancel(arguments: Any?) {
+        sensorManager.unregisterListener(sensorEventListener)
     }
 }

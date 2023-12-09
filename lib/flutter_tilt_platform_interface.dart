@@ -1,4 +1,4 @@
-import 'package:flutter_tilt_widget_widget/models/gyroscope_event.dart';
+import 'package:flutter_tilt_widget/models/gyroscope_event.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_tilt_method_channel.dart';
@@ -24,14 +24,17 @@ abstract class FlutterTiltPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// Returns a [Future] with the platform version.
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
+  /// Returns a [Future] with the gyroscope event.
   Future<GyroscopeEvent?> getGyroscope() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
+  /// Returns a [Stream] of gyroscope events.
   Stream<GyroscopeEvent> get gyroscopeStream {
     throw UnimplementedError('gyroscopeStream has not been implemented.');
   }

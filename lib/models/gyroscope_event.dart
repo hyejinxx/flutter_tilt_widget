@@ -1,3 +1,4 @@
+/// Gyroscope event model
 class GyroscopeEvent {
   final double x;
   final double y;

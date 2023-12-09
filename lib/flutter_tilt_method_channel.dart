@@ -11,6 +11,7 @@ class MethodChannelFlutterTilt extends FlutterTiltPlatform {
   final methodChannel =
       const MethodChannel('flutter_tilt_widget_method_channel');
 
+  /// Returns a [Future] with the platform version.
   @override
   Future<String?> getPlatformVersion() async {
     final version =
@@ -18,6 +19,7 @@ class MethodChannelFlutterTilt extends FlutterTiltPlatform {
     return version;
   }
 
+  /// Returns a [Future] with the gyroscope event.
   @override
   Future<GyroscopeEvent?> getGyroscope() async {
     final gyroscope =

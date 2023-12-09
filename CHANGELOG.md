@@ -21,3 +21,7 @@ make it more perfect
 ## 0.1.4
 
 make it more perfect and active
+
+## 0.1.5
+
+add dartdoc
